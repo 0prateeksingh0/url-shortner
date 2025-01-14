@@ -21,3 +21,50 @@ A fast, simple, and efficient **URL Shortener** powered by **Node.js**, **Expres
 ## 🚀 Getting Started  
 ![image](https://github.com/user-attachments/assets/27ba4766-345e-4b77-85b0-2bbb87fbcd18)
 
+![image](https://github.com/user-attachments/assets/2b1dc60e-be80-458f-944a-1459e050ddad)
+
+### 1️⃣ Clone the Repository  
+```bash
+git clone https://github.com/yourusername/url-shortener.git
+cd url-shortener
+2️⃣ Install Dependencies
+Install all the required Node.js packages:
+
+bash
+Copy code
+npm install
+3️⃣ Configure Environment Variables
+Create a .env file in the root directory and add the following:
+
+makefile
+Copy code
+MONGO_URI=your_mongodb_connection_string
+PORT=3000
+4️⃣ Start MongoDB
+Ensure MongoDB is running locally or provide a cloud MongoDB URI (e.g., MongoDB Atlas).
+
+5️⃣ Run the Server
+Start the server with:
+
+bash
+Copy code
+node server.js
+The app will run at http://localhost:3000.
+
+📂 Project Structure
+plaintext
+Copy code
+📦 url-shortener  
+├── 📄 server.js         # Main application file  
+├── 📂 views             # EJS templates  
+├── 📂 public            # Static assets (CSS, JS, Images)  
+└── 📂 models            # Mongoose models  
+📦 Dependencies
+Express: Fast, unopinionated web framework.
+Mongoose: Elegant MongoDB object modeling for Node.js.
+EJS: Embedded JavaScript templating.
+ShortID: Generate short, unique IDs for URLs.
+✨ Future Enhancements
+Add user authentication for personal URL management.
+Track link click analytics.
+Generate QR codes for short URLs.
