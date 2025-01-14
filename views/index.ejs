@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener - Solo Leveling</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0d0d0d, #1a1a2e);
+            color: #eaeaea;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            background: linear-gradient(145deg, #2a2a3d, #1a1a2e);
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9), 0 0 30px rgba(50, 50, 200, 0.6);
+            width: 500px;
+            text-align: center;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        h1 {
+            font-size: 38px;
+            margin-bottom: 20px;
+            color: #ffcc29;
+            text-shadow: 0 0 10px #ffcc29, 0 0 30px rgba(255, 204, 41, 0.6);
+        }
+
+        label {
+            font-size: 18px;
+            color: #c0c0c0;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #33334d, #4d4d66);
+            color: #ffffff;
+            font-size: 16px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+            transition: all 0.3s ease-in-out;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            box-shadow: 0 0 20px #4d4dff, 0 0 10px #1a1a66;
+            transform: scale(1.05);
+        }
+
+        button {
+            padding: 15px 30px;
+            background: linear-gradient(145deg, #ff6600, #ff4500);
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(255, 69, 0, 0.8);
+            transition: transform 0.3s ease-in-out, box-shadow 0.4s ease;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(255, 69, 0, 1), 0 0 15px rgba(255, 69, 0, 0.8);
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+            text-shadow: 0 0 10px #00ffcc, 0 0 20px rgba(0, 255, 204, 0.6);
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #00e6b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>URL Shortener Project</h1>
+        <form action="/short" method="POST">
+            <label for="longUrl">Enter long URL:</label>
+            <input type="text" id="longUrl" name="longUrl" required>
+            <button type="submit">Shorten</button>
+        </form>
+        <% if(shortUrl) { %>
+        <p>Short URL :- <a href="<%= shortUrl %>" target="_blank"><%= shortUrl %></a></p>
+        <% } %>
+    </div>
+</body>
+</html>
