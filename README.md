@@ -55,16 +55,13 @@ The app will run at http://localhost:3000.
 plaintext
 Copy code
 📦 url-shortener  
-├── 📄 server.js         # Main application file  
-├── 📂 views             # EJS templates  
-├── 📂 public            # Static assets (CSS, JS, Images)  
-└── 📂 models            # Mongoose models  
+├── 📄 server.js         # Main application file (entry point)  
+├── 📂 views             # EJS templates for dynamic rendering  
+├── 📂 controllers       # Logic for handling requests and rendering views  
+└── 📂 models            # Mongoose models for database interactions  
 📦 Dependencies
 Express: Fast, unopinionated web framework.
 Mongoose: Elegant MongoDB object modeling for Node.js.
 EJS: Embedded JavaScript templating.
 ShortID: Generate short, unique IDs for URLs.
-✨ Future Enhancements
-Add user authentication for personal URL management.
-Track link click analytics.
-Generate QR codes for short URLs.
+
